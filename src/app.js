@@ -5,7 +5,7 @@ const express = require("express");
 const app = express();
 
 // 라우팅
-const home = require("./routes/home");  // 라우터 경로를 home변수에 선언. 
+const home = require("../routes/home");  // 라우터 경로를 home변수에 선언. 
 
 // 앱 셋팅
 app.set("views", "./views"); // 화면 view를 관리해줄 파일 저장될 파일 이름을 두번째 인자로 넘겨주면 된다.
