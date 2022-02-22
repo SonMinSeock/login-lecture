@@ -12,5 +12,15 @@ function login() {
         id: id.value,
         password: password.value,
     };
-    console.log(req);
+    
+    console.log(req, JSON.stringify(req));
+    
+    fetch("/login", {
+        method: "POST", // HTTP 프로토콜 POST 방식으로 데이터 전달 해준다.
+        // 데이터 전달 할때 데이터 타입을 알려줘야 한다. (현재 데이터 타입은 JSON으로 보낸디고 알려줘야 한다.)
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(req)
+    });
 }

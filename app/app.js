@@ -14,7 +14,7 @@ app.set("view engine", "ejs");
 
 // 라우터 index.js에 던진 것을 받아야 한다. app.use() 사용한다.
 // app.use()는 미들웨어 등록 해주는 것이다. 
-
+console.log(`${__dirname}`);
 app.use(express.static(`${__dirname}/src/public`)); // 정적 경로로 추가
 app.use("/", home); // "/"경로 오면 home경로에 index.js로 이동해준다.
 module.exports = app;

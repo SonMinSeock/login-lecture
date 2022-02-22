@@ -6,7 +6,6 @@ const router = express.Router();
 const ctrl = require("./home.ctrl");
 
 router.get("/", ctrl.home);
-
 router.get("/login", ctrl.login);
 
 // 외부파일에 라우터를 사용 할 수있도록 해준다.
